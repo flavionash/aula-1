@@ -5,6 +5,12 @@ p{
     font-size: 20px;
 }
 
+.p1{    
+   
+    text-align: center;
+    font-weight: 900 ;    
+}
+
 .bg-color1{
     background: rgba(96, 179, 40, 0.753);
 }
@@ -40,10 +46,10 @@ p{
     color: white;
 }
 
-caption {
-    caption-side: top;
-    text-align: right;
+.cor-fonte1{
+    color: rgb(255, 25, 25);   
 }
+
 
 .container{
     display: grid;
@@ -116,9 +122,24 @@ img{
     margin-top: 5px;
     margin-left: 0px;       
 }
+
 /*Quando a tela chegar no tamanho menor que 890px a letra vai diminuir de tamanho*/
 @media screen and (max-width: 890px) {
     p{
         font-size: 2vw;
-    }        
+    }
+    .p1{
+        font-size: 2vw;
+    }
+
 } 
+
+.blink_me {
+    animation: blinker 1.5s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
