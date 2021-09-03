@@ -13,18 +13,11 @@
     h1{
         text-align: center;
     }
+    
     p{
         font-size: 20px;
     }
-
-    .p1{
-        font-size: 25px;
-    }
-
-    .cor-fonte{
-        color: white;
-    }
-
+    
     .bg-color1{
         background: rgba(96, 179, 40, 0.753);
     }
@@ -56,6 +49,10 @@
         background: linear-gradient(93.12deg, #6A686E 0%, #A22A29 25.52%, #C51417 52.08%, #ED6E0B 80.73%, #FFD213 100%);
     }
 
+    .cor-fonte{
+        color: white;
+    }
+
     caption {
         caption-side: top;
         text-align: right;
@@ -74,9 +71,11 @@
         -webkit-box-shadow: 5px 5px 15px 5px #000000; 
         box-shadow: 15px 15px 15px 0px #000000;;
     }
+
     .container2{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;       
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);           
         grid-gap: 5px;
         border-width: 5px;
         text-align: center;       
@@ -93,13 +92,14 @@
         box-shadow: 15px 15px 15px 0px #000000;;
         transition: all 0.5s;        
     }
-    
+    /* Rotação do texto dentro da div*/
     .div-2 :hover{
         cursor: cell;        
         transform: rotate3d(1, 0, 0, 180deg);
         transition: all 3.5s;                  
     }
-
+    
+    /* Barrinha de progresso */
     .progress{
         height: 15px;
         background-color: #515250cc;
@@ -122,12 +122,14 @@
     }
 
     img{
-        width: 100%;       
+        width: 100%;
+        margin-top: 5px;
+        margin-left: 0px;       
     }
-
-    @media screen and (max-width: 200px) {
+    /*Quando a tela chegar no tamanho menor que 890px a letra vai diminuir de tamanho*/
+    @media screen and (max-width: 890px) {
         p{
-            font-size: 8vw;
+            font-size: 2vw;
         }        
     }
 
@@ -157,47 +159,54 @@
     }
 
 </style>
+
 <body>
     <h1>GRID, BORDER E TRANSITIONS</h1>
     
     <div class="container">
-        <div class="bg-color1" id="titulo1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <div class="bg-color1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Et, quos? Iste vel quaerat saepe inventore? Consequatur eum ad soluta 
             praesentium minima esse et, dolorum a, animi velit blanditiis eveniet minus!</p>
         </div>
 
-        <div class="bg-color2" id="titulo2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <div class="bg-color2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Et, quos? Iste vel quaerat saepe inventore? Consequatur eum ad soluta 
             praesentium minima esse et, dolorum a, animi velit blanditiis eveniet minus!</p>
         </div>
 
-        <div class="bg-color3 cor-fonte" id="titulo1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <div class="bg-color3 cor-fonte"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Et, quos? Iste vel quaerat saepe inventore? Consequatur eum ad soluta 
             praesentium minima esse et, dolorum a, animi velit blanditiis eveniet minus!</p>
         </div>
 
-        <div class="bg-color4" id="titulo2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <div class="bg-color4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Et, quos? Iste vel quaerat saepe inventore? Consequatur eum ad soluta 
             praesentium minima esse et, dolorum a, animi velit blanditiis eveniet minus!</p>
         </div>
     </div>
     
-    <div class="container2"> 
-        <div class="test" id="titulo2">                      
-            Lorem ipsum dolor                
-        </div> 
-       
-        <div class="progress">
-            <img alt="Erro ao carregada imagem" src="img/pexels-photo-127160.jpeg">
-            <div class="progress-bar"></div>           
-        </div> 
-        
-        <div class="bg-color2 div-1" id="titulo1">            
-            <img  src="img/pexels-photo-210156.jpeg">
-            <caption>Passe o mouse sobre a imagem</caption>            
-        </div>                     
+    <div class="container2 bg-color2">
+        <div>
+            <p> 
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ut vel dolorum dolores quasi rem 
+                perferendis. Sed deleniti amet, earum aperiam ullam unde quibusdam impedit? Voluptatibus iusto 
+                minima distinctio suscipit!
+            </p>            
+        </div>
+
+        <div >            
+            <img  src="img/pexels-photo-127160.jpeg">                                 
+        </div>  
+
+        <div class="div-1" >            
+            <img  src="img/pexels-photo-210156.jpeg">                     
+        </div>                        
     </div>
-    <script src="exemplo1.js"--></script>
+    
+    <div class="progress">            
+        <div class="progress-bar"></div>           
+    </div>     
+    
 
 </body>    
 </html>
