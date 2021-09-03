@@ -1,0 +1,124 @@
+h1{
+    text-align: center;
+}
+p{
+    font-size: 20px;
+}
+
+.bg-color1{
+    background: rgba(96, 179, 40, 0.753);
+}
+
+.bg-color2{
+    background: rgba(231, 243, 61, 0.753);
+}
+
+.bg-color3{
+    background: rgba(0, 0, 0, 0.753);
+}
+
+.bg-color4{
+    background: rgba(112, 101, 207, 0.753);
+}
+
+.bg-color5{
+    background: whitesmoke
+}
+
+.bg-color6{
+    background: rgba(255, 37, 37, 0.904);
+}
+
+.bg-gradient-medium {
+    background: linear-gradient(210.17deg, #FF6C1A 14.05%, #C51417 50.03%, #880E49 95.16%);
+}
+.bg-gradient-heavy {
+    background: linear-gradient(93.12deg, #6A686E 0%, #A22A29 25.52%, #C51417 52.08%, #ED6E0B 80.73%, #FFD213 100%);
+}
+
+.cor-fonte{
+    color: white;
+}
+
+caption {
+    caption-side: top;
+    text-align: right;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    text-align: center;      
+    margin-left: 15px;
+    margin-right: 15px;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px 0px 10px 0px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 15px 15px 15px 0px #000000;;
+}
+
+.container2{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);           
+    grid-gap: 5px;
+    border-width: 5px;
+    text-align: center;       
+    margin-top: 30px;      
+    margin-left: 15px;
+    margin-right: 15px;        
+    border-style: solid;
+    border-radius: 0px 0px 0px 10px;  
+    box-shadow: 15px 15px 15px 0px #000000;;
+}
+
+.div-1 :hover {
+    transform: translate(12px, -20px);
+    box-shadow: 15px 15px 15px 0px #000000;;
+    transition: all 0.5s;        
+}
+/* Rotação do texto dentro da div*/
+.div-2 :hover{
+    cursor: cell;        
+    transform: rotate3d(1, 0, 0, 180deg);
+    transition: all 3.5s;                  
+}
+
+/* Barrinha de progresso */
+.progress{
+    height: 15px;
+    margin-top: 7px;
+    margin-left: 50px;
+    margin-right: 60px;
+    background-color: #515250cc;
+    position: relative;
+    
+}
+
+.progress .progress-bar{
+    position: absolute;        
+    height: 100%;
+    background: linear-gradient(210.17deg, #c9eec9 14.05%, #59a178 50.03%, #38d14c 95.16%);
+    animation: progress-animation 6s infinite;
+}
+
+@keyframes progress-animation{
+    0% { width: 0%; }
+    
+    100% { width: 100%}
+    
+}
+
+img{
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 0px;       
+}
+/*Quando a tela chegar no tamanho menor que 890px a letra vai diminuir de tamanho*/
+@media screen and (max-width: 890px) {
+    p{
+        font-size: 2vw;
+    }        
+} 
